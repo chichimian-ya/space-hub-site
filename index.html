@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空间掌握小屋 · 本地磁盘空间分析工具</title>
+<style>
+  :root { --pink:#e8a0b4; --pink-d:#c77d95; --ink:#4a3b40; --muted:#8b7880; --card:#fff8f1; --line:#f0dde3; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink);
+         background:linear-gradient(160deg,#fff6f7 0%,#fdf1ec 55%,#fbeef4 100%); line-height:1.75; min-height:100vh; }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 22px 80px; }
+  header { text-align:center; margin-bottom:44px; }
+  .logo { width:96px; height:96px; border-radius:24px; box-shadow:0 8px 24px rgba(199,125,149,.28); }
+  h1 { font-size:28px; margin:18px 0 6px; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:15px; margin:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 28px;
+          margin-bottom:20px; box-shadow:0 4px 18px rgba(199,125,149,.08); }
+  h2 { font-size:19px; margin:0 0 14px; padding-left:12px; border-left:4px solid var(--pink); }
+  ul { margin:0; padding-left:22px; }
+  li { margin:8px 0; }
+  .tag { display:inline-block; background:#fce8ee; color:var(--pink-d); border-radius:20px;
+         padding:3px 12px; font-size:12px; margin:0 6px 6px 0; }
+  .note { font-size:13px; color:var(--muted); background:#fdf3f5; border-radius:10px; padding:12px 16px; margin-top:14px; }
+  a { color:var(--pink-d); }
+  footer { text-align:center; color:var(--muted); font-size:12px; margin-top:36px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="logo.png" alt="空间掌握小屋图标">
+    <h1>空间掌握小屋</h1>
+    <p class="sub">一个把「C 盘爆红焦虑」变成可下钻、可对比、可追溯的空间账本的本地工具</p>
+  </header>
+
+  <div class="card">
+    <h2>这是什么</h2>
+    <p>一款 Windows 桌面端的磁盘空间分析工具，用 Treemap 矩形图把磁盘占用画成一张可下钻的地图。所有分析默认在本机离线完成，无需上传你的文件。</p>
+    <div>
+      <span class="tag">空间可视化</span><span class="tag">快照对比监控</span>
+      <span class="tag">实时文件监控</span><span class="tag">重复文件检测</span>
+      <span class="tag">中英双语</span><span class="tag">Google Drive 只读分析</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>主要功能</h2>
+    <ul>
+      <li><b>Treemap 空间地图</b>：按大小矩形展示磁盘/目录占用，逐层点开定位大文件。</li>
+      <li><b>快照对比</b>：记录某一时刻的空间状态，对比出新增、删除、变化的文件。</li>
+      <li><b>实时监控</b>：监听指定目录的文件写入与变动。</li>
+      <li><b>文件悬浮解析</b>：借助你自行配置的大模型，解释某个目录/文件的用途（可关闭）。</li>
+      <li><b>Google Drive（只读）</b>：可登录自己的谷歌账户，统计云端硬盘的空间占用；仅读取元数据与目录结构，不会修改或删除云端文件。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>隐私与数据</h2>
+      <p>本地磁盘数据只在本机处理，不上传到任何服务器。Google Drive 功能使用 <code>drive.readonly</code> 只读权限，令牌加密保存在你自己的设备上；你随时可以移除账户来撤销授权。</p>
+      <p>详细说明请阅读 <a href="privacy.html">隐私政策</a>。</p>
+  </div>
+
+  <footer>© 空间掌握小屋 · 个人实用工具</footer>
+</div>
+</body>
+</html>
